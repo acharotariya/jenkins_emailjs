@@ -10,8 +10,11 @@ pipeline {
         }
         stage('Test') {
             steps {
+                sh 'make clean'
+                sh './configure'
                 sh 'make check || true'
                 echo 'Testing..'
+
                 sh 'node --version'
                 sh 'npm prune'
                 sh 'npm install'
