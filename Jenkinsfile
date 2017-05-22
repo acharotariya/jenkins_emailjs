@@ -13,7 +13,7 @@ pipeline {
 
                 echo 'Testing..'
 
-                senv.NODE_ENV = "test"
+                env.NODE_ENV = "test"
 
                print "Environment will be : ${env.NODE_ENV}"
 
