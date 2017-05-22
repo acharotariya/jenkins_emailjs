@@ -4,15 +4,13 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'make'
+              
                 echo 'Building..'
             }
         }
         stage('Test') {
             steps {
-                sh 'make clean'
-                sh './configure'
-                sh 'make check || true'
+
                 echo 'Testing..'
 
                 sh 'node --version'
@@ -24,7 +22,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh 'make'
+
                 echo 'Deploying....'
             }
         }
