@@ -13,11 +13,14 @@ pipeline {
 
                 echo 'Testing..'
 
-                sh 'node --version'
-                sh 'npm prune'
-                sh 'npm install'
-                sh 'npm start'
+                senv.NODE_ENV = "test"
 
+               print "Environment will be : ${env.NODE_ENV}"
+
+               sh 'node -v'
+               sh 'npm prune'
+               sh 'npm install'
+               sh 'npm test'
             }
         }
         stage('Deploy') {
