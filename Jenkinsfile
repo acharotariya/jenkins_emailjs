@@ -1,5 +1,4 @@
 pipeline {
-    agent { docker 'node:boron' }
 
     stages {
         stage('Build') {
