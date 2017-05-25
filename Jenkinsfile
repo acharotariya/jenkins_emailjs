@@ -12,7 +12,9 @@ pipeline {
             steps {
 
                 echo 'Testing..'
-
+                withDockerContainer(args: "-u root", image: "${JOB_NAME}") {
+                sh "npm install"
+                }
 
                sh 'node -v'
                sh '/usr/local/bin/npm install'
