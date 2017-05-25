@@ -15,7 +15,7 @@ pipeline {
 
 
                sh 'node -v'
-               sh 'npm install'
+               sh '/usr/local/bin/npm install'
                sh 'node myfile.js'
             }
         }
