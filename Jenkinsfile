@@ -15,7 +15,7 @@ pipeline {
 
 
                sh 'node -v'
-               sh 'sudo npm install'
+               sh 'npm install'
                sh 'node myfile.js'
             }
         }
